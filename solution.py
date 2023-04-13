@@ -17,7 +17,7 @@ def solution(x_success: int,            # Количество продаж на
     test_conversion = y_success / y_cnt
     
     # perform two-sided hypothesis test with alpha significance level
-    p_value = binomtest(y_success, n=y_cnt, p=control_conversion).pvalue
+    p_value = binomtest(int(y_success), n=int(y_cnt), p=control_conversion).pvalue
     
     alpha = 0.07
     reject_null = p_value < alpha
